@@ -1,265 +1,151 @@
-<!doctype html>
-<!--
-╔══════════════════════════════════════════════════════════════════╗
-║              EXERCÍCIO — ESQUINA DO SABOR                        ║
-║          Estrutura Semântica HTML5 + Estilização CSS             ║
-╠══════════════════════════════════════════════════════════════════╣
-║                                                                  ║
-║  O que você vai fazer:                                           ║
-║  1. Completar a estrutura semântica desta página                 ║
-║  2. Adaptar o conteúdo com o tema de restaurante que você        ║
-║     escolher (nome, pratos, história, etc.)                      ║
-║  3. Criar o estilo visual no arquivo styles.css                  ║
-║                                                                  ║
-║  Arquivos do exercício:                                          ║
-║  → index.html    (este arquivo — edite aqui)                     ║
-║  → styles.css    (crie os estilos aqui)                          ║
-║  → exemplo.html  (referência — consulte, não edite)              ║
-║  → guia-html.html (guia completo de HTML — use como dicionário)  ║
-║  → guia-css.html  (guia completo de CSS — use como dicionário)   ║
-║                                                                  ║
-║  Dica: abra o exemplo.html no navegador para ver como           ║
-║  a página pode ficar. Depois volte aqui e construa a sua.        ║
-╚══════════════════════════════════════════════════════════════════╝
--->
+<!DOCTYPE html>
+<!--configuracoes da pagina crush -->
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--titulo da page-->
+  <title>Crush por Pix $$</title>
 
-<!--
-  TODO 1 ── Defina o idioma correto da página.
-  ─────────────────────────────────────────────
-  O atributo lang no <html> informa ao navegador e ao Google
-  em qual idioma o conteúdo está escrito.
-  
+  <!--vinculando o css -->
+  <link rel="stylesheet" href="styles.css" />
 
-  ✏️  Troque o atributo abaixo pelo valor correto.
-  📖  Referência: guia-html.html → Seção 1 "Estrutura base"
--->
-<html lang="TROQUE-AQUI">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-		<!--
-    TODO 2 ── Defina o título da aba do navegador.
-    ──────────────────────────────────────────────
-    A tag <title> controla o texto que aparece na aba do navegador
-    e nos resultados de busca do Google.
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
 
-    ✏️  Escreva o nome do seu restaurante dentro da tag abaixo.
-  -->
-		<title>NOME DO SEU RESTAURANTE</title>
+<body>
 
-		<!--
-    A linha abaixo conecta este HTML ao seu arquivo de estilos.
-    Não altere — ela já está configurada corretamente.
-  -->
-		<link rel="stylesheet" href="[nome do arquivo.css]" />
+  <header>
+    <h1>$ Crush por Pix $</h1>
+    <p>Escolha seu par ideal para o date dos sonhos , depois de fazer o pix claro🍴</p>
+    <!--Lista de navegação pra direcionar o usuário ao local desejado -->
 
-		<!--
-    FONTES DO GOOGLE (opcional, mas recomendado)
-    ─────────────────────────────────────────────
-    As linhas abaixo importam duas fontes gratuitas do Google Fonts:
-    → "Playfair Display" — fonte elegante para títulos
-    → "Lato"            — fonte limpa para textos
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+    <!--conteudo principal da pagina / um pouco sobre ela -->
+  <main>
+      
+    <section id="inicio">
+      <h2>Bem-vindo(a)</h2>
+      <p>
+        Bem-vindo ao Tinder Gourmet. Aqui você escolhe seu crush como quem
+        escolhe um lanche. Mas aviso: alguns vêm com combo de trauma incluso.
+        Veja as opções e faça seu pedido.
+      </p>
+    </section>
+      <!--seção de cardapio para escolher seu crush -->
+    <section id="menu">
+      <h2>Nosso Cardápio</h2>
 
-    Para usar no CSS: font-family: 'Playfair Display', serif;
-                      font-family: 'Lato', sans-serif;
+      <article>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkabOEJZA0yGKTyoMBV3kSLzznaJO0GJQHxg&s" alt="Jungkook bts">
 
-    Você pode trocar por outras fontes em: https://fonts.google.com
-    Não precisa alterar agora — volte aqui depois se quiser.
-  -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
+        <h3>Jungkook bts</h3>
+        <p>
+          Aceita ir em pastelaria de chinês
+        </p>
+        <p class="preco">R$ 150,99</p>
+      </article>
 
-	<body>
-		<!-- ============================================================
-    BLOCO 1: CABEÇALHO DA PÁGINA
-    ================================================================
+      <article>
+        <img src="https://i.pinimg.com/originals/35/e3/72/35e372364ed88e4ec231d7defc319f86.jpg" alt="Davi Britto">
 
-    TODO 3 ── Adicione a tag semântica de cabeçalho.
-    ──────────────────────────────────────────────────
-    O cabeçalho da página deve ser marcado com a tag <header>.
-    Ele fica no TOPO e contém o nome/logo do restaurante
-    e o menu de navegação.
+        <h3>Davi Britto</h3>
+        <p>
+          Doutor, advogado, celebridade, ator e tudo que existe de bom.
+          Viciado em falar: "Vai pra casa di gue?"
+        </p>
+        <p class="preco">R$ 150,99</p>
+      </article>
 
-    ✏️  Envolva TODO o conteúdo abaixo (até o comentário
-        "FIM DO CABEÇALHO") com as tags <header> e </header>.
+      <article>
+        <img src="https://i.pinimg.com/236x/91/c6/93/91c6936524c83913afc087f873f3e62d.jpg" alt="Neymar Jr">
 
-    📖  Referência: guia-html.html → Seção 2 "Tags semânticas"
-    👁️  Veja como fica: exemplo.html → bloco <header>
-  ============================================================ -->
+        <h3>Neymar Jr Deluxe</h3>
+        <p>
+          Só aceita jantar em restaurante caro. Sempre envolvido em alguma
+          polêmica. Vem com festas, férias em Paris e manchetes de traição.
+        </p>
+        <p class="preco">R$ 499,99 + exposição pública</p>
+      </article>
 
-		<!--
-      TODO 4 ── Personalize o nome e slogan do restaurante.
-      ──────────────────────────────────────────────────────
-      ✏️  Troque "Esquina do Sabor" pelo nome que você escolheu.
-          Troque o parágrafo pelo slogan do seu restaurante.
-      ⚠️  Mantenha as tags <h1> e <p> — apenas mude o conteúdo.
-    -->
-		<h1>Esquina do Sabor</h1>
-		<p>Sabor de verdade, feito com carinho 🍴</p>
+      <article>
 
-		<!--
-      TODO 5 ── Crie o menu de navegação.
-      ─────────────────────────────────────
-      A navegação principal de um site usa a tag <nav>.
-      Dentro dela, os links ficam em uma lista não-ordenada (<ul>),
-      e cada link é um item de lista (<li>) com um link (<a>).
+        <img src="https://aqui.uai.com.br/wp-content/uploads/2023/05/virginia-1280x720.jpg" alt="Virginia">
+        <h3>Virginia</h3>
+        <p>Ideal para aquele pastel na feira e stories patrocinados.</p>
+        <p class="preco">R$ 199,99 + publi</p>
+      </article>
 
-      Os links usam "#" seguido do id de cada seção para
-      levar o usuário direto ao conteúdo ao clicar.
+      <article>
 
-      ✏️  Substitua este comentário pela estrutura de navegação.
-          Use as 4 seções: #inicio, #menu, #sobre, #contato
+        <img src="https://static.poder360.com.br/2022/08/santinho-bolsomita-29ago2022-848x477.jpg" alt="Bolsomita">
+        <h3>Bolsomita</h3>
+        <p>
+          Date raiz: topa churrasco, cerveja, vinho e tainha.
+        </p>
+        <p class="preco">R$ 49,00</p>
+      </article>
 
-      Estrutura esperada:
-      ┌─────────────────────────────┐
-      │ <nav>                       │
-      │   <ul>                      │
-      │     <li><a href="#inicio">  │
-      │     <li><a href="#menu">    │
-      │     <li><a href="#sobre">   │
-      │     <li><a href="#contato"> │
-      │   </ul>                     │
-      │ </nav>                      │
-      └─────────────────────────────┘
+    </section>
+       <!--Seção pra saber o objetivo do site -->
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
 
-      📖  Referência: guia-html.html → Seção 2 "Tags semânticas"
-    -->
+      <p>
+        Bem-vindo ao único restaurante onde, além de escolher o que comer,
+        você também escolhe o primeiro encontro.
+      </p>
 
-		<!-- FIM DO CABEÇALHO -->
+      <p>
+        Nosso objetivo é simples: faturar em cima de você, jovem encalhado,
+        que precisa pagar alguém pra sentar na mesa e dividir uma coxinha.
+        Triste? Talvez. Lucrativo pra gente? Com certeza.
+      </p>
 
-		<!-- ============================================================
-    BLOCO 2: CONTEÚDO PRINCIPAL
-    ================================================================
+    </section>
 
-    TODO 6 ── Adicione a tag de conteúdo principal.
-    ─────────────────────────────────────────────────
-    A tag <main> marca o conteúdo central e único da página.
-    Deve existir apenas UMA vez por documento.
+    <!--Contato-->
 
-    ✏️  Envolva TODO o conteúdo abaixo (até o comentário
-        "FIM DO CONTEÚDO PRINCIPAL") com <main> e </main>.
+    <section id="contato">
 
-    📖  Referência: guia-html.html → Seção 2 "Tags semânticas"
-  ============================================================ -->
+      <h2>Peça seu Date</h2>
 
-		<!-- ----------------------------------------------------------
-      SEÇÃO: INÍCIO
-      ────────────────────────────────────────────────────────────
+      <form>
 
-      TODO 7 ── Crie a seção de boas-vindas.
-      ────────────────────────────────────────
-      Uma <section> agrupa conteúdos de um mesmo tema.
-      O atributo id="inicio" permite que o link do menu
-      (#inicio) role a página até aqui.
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" />
 
-      ✏️  Substitua este comentário por uma <section id="inicio">
-          contendo:
-          → Um <h2> de boas-vindas (ex: "Bem-vindo!")
-          → Um <p> convidando o visitante a explorar o menu
+        <label for="email">Seu e-mail</label>
+        <input type="email" id="email" name="email" />
 
-      ✏️  Personalize com o tema do seu restaurante.
+        <label for="msg">Mensagem</label>
+        <textarea id="msg" name="msg"></textarea>
 
-      📖  Referência: guia-html.html → Seção 3 "Hierarquia"
-    ---------------------------------------------------------- -->
+        <button type="submit">Enviar Pedido de Date</button>
 
-		<!-- ----------------------------------------------------------
-      SEÇÃO: MENU DE PRATOS
-      ────────────────────────────────────────────────────────────
+      </form>
 
-      TODO 8 ── Crie a seção do cardápio com os pratos.
-      ──────────────────────────────────────────────────
-      A tag <article> representa conteúdo independente — cada
-      prato é um artigo porque pode existir por si só.
+    </section>
 
-      ✏️  Substitua este comentário por uma <section id="menu">
-          contendo:
-          → Um <h2> "Nosso Cardápio" (ou nome que preferir)
-          → Três <article>, um para cada prato do seu restaurante
+  </main>
+   <!--Direitos reservados -->
+  <footer>
+    <p>© 2026 Crush por Pix. Todos os direitos reservados.</p>
+  </footer>
 
-          Cada <article> deve ter:
-          ┌─────────────────────────────────┐
-          │ <article>                       │
-          │   <h3>Nome do prato</h3>        │
-          │   <p>Descrição curta</p>        │
-          │   <p class="preco">R$ 00,00</p> │
-          │ </article>                      │
-          └─────────────────────────────────┘
-
-      ✏️  Invente pratos coerentes com o tema do seu restaurante!
-
-      📖  Referência: guia-html.html → Seção 2, tabela de tags
-
-    ---------------------------------------------------------- -->
-
-		<!-- ----------------------------------------------------------
-      SEÇÃO: SOBRE NÓS
-      ────────────────────────────────────────────────────────────
-
-      TODO 9 ── Crie a seção de apresentação do restaurante.
-      ───────────────────────────────────────────────────────
-      ✏️  Substitua este comentário por uma <section id="sobre">
-          contendo:
-          → Um <h2> "Sobre Nós"
-          → Dois <p> contando a história fictícia do restaurante
-            (quando foi fundado, qual é a proposta, o chef, etc.)
-
-      ✏️  Seja criativo — invente uma história para o lugar!
-
-    ---------------------------------------------------------- -->
-
-		<!-- ----------------------------------------------------------
-      SEÇÃO: CONTATO
-      ────────────────────────────────────────────────────────────
-
-      TODO 10 ── Crie a seção de contato com formulário.
-      ────────────────────────────────────────────────────
-      Um formulário coleta dados do usuário. Cada campo precisa
-      de um <label> associado pelo atributo "for" ao "id" do input.
-      Isso é importante para acessibilidade.
-
-      ✏️  Substitua este comentário por uma <section id="contato">
-          contendo:
-          → Um <h2> "Contato" (ou "Fale Conosco", etc.)
-          → Um <form> com os campos:
-
-          ┌────────────────────────────────────────────────┐
-          │ <label for="nome">Nome</label>                 │
-          │ <input type="text" id="nome" name="nome" />    │
-          │                                                │
-          │ <label for="email">E-mail</label>              │
-          │ <input type="email" id="email" name="email" /> │
-          │                                                │
-          │ <label for="msg">Mensagem</label>              │
-          │ <textarea id="msg" name="msg"></textarea>      │
-          │                                                │
-          │ <button type="submit">Enviar</button>          │
-          └────────────────────────────────────────────────┘
-
-      📖  Referência: guia-html.html → Seção 5 "Formulários"
-    ---------------------------------------------------------- -->
-
-		<!-- FIM DO CONTEÚDO PRINCIPAL -->
-
-		<!-- ============================================================
-    BLOCO 3: RODAPÉ
-    ================================================================
-
-    TODO 11 ── Adicione o rodapé da página.
-    ─────────────────────────────────────────
-    O rodapé usa a tag semântica <footer> e fica no final
-    da página. Geralmente contém copyright e informações legais.
-
-    ✏️  Substitua este comentário por um <footer> contendo
-        um <p> com o texto de copyright do seu restaurante.
-        Exemplo: © 2024 Nome do Restaurante. Todos os direitos reservados.
-
-    📖  Referência: guia-html.html → Seção 2 "Tags semânticas"
-  ============================================================ -->
-	</body>
+</body>
 </html>
