@@ -16,3 +16,10 @@ Critérios de Avaliação – Atividade 1
 - Tema coerente com os elementos 0,6
 - Organização semântica interna 0,6
 - Criatividade 0,6
+
+**INSTRUÇÕES PARA CLONAGEM DO REPOSITÓRIO**
+
+> ABRA O VS CODE SEM NENHUMA PASTA ABERTA
+> CRIE UMA PASTA
+> ABRA O TERMINAL E VERIFIQUE SE NO TERMINAL VOCÊ ESTÁ NO DIRETÓRIO CORRETO
+> APLIQUE O COMANDO : git clone https://github.com/Benevdx/meusPrimeirosCommits.git
